@@ -1,41 +1,66 @@
-<!-- wird als Einleitung für HTML benötigt -->
+<!-- wird als Einleitung benötigt -->
 <!DOCTYPE html>
 
-<!-- damit wird dem Browser gesagt in welcher Sprache die Webseite geschrieben wurde -->
+<!-- Sprachangabe für Browser -->
 <html lang="de">
     
-    <!-- im head stehen Informationen für den Browser -->
+    <!-- Webseitenparameter -->
     <head>
-        <!-- Zeichensetzung für die Webseite -->
+        <!-- Zeichensetzung für Webseite -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Der Titel wird im Browsertab angezeigt sowie bei der Suche mit einer Suchmaschine wie z.B. Google -->
+        <!-- Titel und Seitenbeschreibung für Suchmaschinen -->
         <title>CO2-Emissionen</title>
-
-        <meta name="description" content="In diesem Kurs lernen Sie das Erstellen und Gestalten von Webseiten mit HTML und CSS.">
+        <meta name="description" content="Informationen zu verbrauchten Kohlenstoffdioxidwerten von Unternehmen und Ländern.">
 
         <!-- Links um die Datei CSS und Java-Script mit dieser Datei zu verknüpfen -->
-        <link href="css/style.css" rel="stylesheet">
+        <link href="CSS.css" rel="stylesheet">
     </head>
 
     <!-- im body werden die allgemeine Webseite als Grundgerüst aufgebaut -->
     <body>
+        <!-- der header ist der Kopfbereich bei dem eine allgemeine Navigation der Webseite eingerichtet werden kann, 
+        die bei einem Seitenwechsel erhalten werden sollte um eine Benutzerfreundliche Umgebung zu schaffen-->
         <header>
-            <h1>HTML + CSS</h1>
-            <p>Webseiten erstellen und gestalten</p>
+            <!-- Navigationsbereich -->
+            <nav>
+                <ul>
+                    <li>
+                        <form>
+                            <input type= "text" name="suche" placeholder="Suche">
+                        </form>
+                    </li>
+                    <li><a href="https://www.instagram.com/WebAppStartup">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/WebAppStartup">Facebook</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <h1>Kohlenstoffdioxidwerte von Unternehmen und Ländern</h1>
+            <h1><img src="Titelbild.png" alt="Titelbild" dth="307" height="205"></h1>
+            <p>Quelle: Geralt, 2020, Pixabay Lizenz</p>
         </header>
 
-        <nav>
-
-        </nav>
-
         <main>
-
+            <nav>
+                <ul>
+                    <li><a href="home.html">Homepage</a></li>
+                    <li><a href="services.html">Unsere Leistungen</a></li>
+                    <li><a href="products.html">Unsere Produkte</a></li>
+                    <li><a href="prices.html">Unsere Preise</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                </ul>
+            </nav>
+            <p>Text eingeben zu Unternehmens und Länderwerten</p>
         </main>
 
         <footer>
-            
+            <nav>
+                <ul>
+                    <li class="d-inline"><a href="privacy.html">Datenschutz</a></li>
+                    <li class="d-inline"><a href="imprint.html">Impressum</a></li>
+                </ul>
+            </nav>
         </footer>
 
     </body>
