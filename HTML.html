@@ -16,6 +16,7 @@
 
         <!-- Links um die Datei CSS und Java-Script mit dieser Datei zu verknüpfen -->
         <link href="CSS.css" rel="stylesheet">
+        <script src="Java-Script.js" defer></script>
     </head>
 
     <!-- im body werden die allgemeine Webseite als Grundgerüst aufgebaut -->
@@ -64,11 +65,13 @@
             
             <label for="typ">Typ:</label>
                 <select id="typ">
+                    <option value="auswählen">Auswählen</option>
                     <option value="land">Land</option>
                     <option value="unternehmen">Unternehmen</option>
                 </select>
-            <label for="sortierung">Sortierung:</label>
+            <label for="sortierung">CO2-Wert:</label>
                 <select id="sortierung">
+                    <option value="auswählen">Auswählen</option>
                     <option value="aufsteigend">Aufsteigend</option>
                     <option value="absteigend">Absteigend</option>
                 </select>
@@ -157,6 +160,5 @@
                 </ul>
             </nav>
         </footer>
-
     </body>
 </html>
