@@ -5,21 +5,21 @@ document.addEventListener("DOMContentLoaded", function() {
     typSelect.addEventListener("change", updateTable);
     sortierungSelect.addEventListener("change", updateTable);
     
-    // Speichere die ursprüngliche Reihenfolge der Tabellenzeilen
+    // die ursprünlgiche Reihenfolge der Tabelle speichern
     const originalRows = Array.from(document.querySelectorAll("tbody tr"));
 
     function updateTable() {
         const typ = typSelect.value;
         const sortierung = sortierungSelect.value;
         
-        // Setze die Tabelle auf die ursprüngliche Reihenfolge zurück
+        // die Tabelle in die Ursprungsform zurücksetzen
         const tbody = document.querySelector("tbody");
         tbody.innerHTML = "";
         originalRows.forEach(row => {
             tbody.appendChild(row);
         });
         
-        // Wenn beide Komboboxen "auswählen" anzeigen, beende die Funktion hier
+        // Wenn beide Komboboxen "auswählen" anzeigen, wird hier abgebrochen
         if (typ === "auswählen" && sortierung === "auswählen") {
             return;
         }
@@ -45,10 +45,23 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
         
-        tbody.innerHTML = ""; // Lösche den aktuellen Inhalt des tbody-Elements
+        tbody.innerHTML = ""; 
         
         filteredRows.forEach(row => {
-            tbody.appendChild(row); // Füge die gefilterten und sortierten Zeilen hinzu
+            tbody.appendChild(row); // die gefilterten und sortierten Zeilen hinzufügen
         });
     }
 });
+
+
+document.querySelector("form").onsubmit = function() {
+    //Wert des Suche-Felds bestimmen
+     let suche = document.querySelector("input").value;
+     if (suche.length < 3) {
+        window.alert("zu kurzer Suchbegriff");
+     } else {
+        
+        window.alert("Suche nach \"" + suche + "\" noch nicht implementiert");
+     }
+     return false;
+   };
