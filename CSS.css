@@ -1,0 +1,12 @@
+
+/* Displayanordnung */
+    /* Gesamtbreite der Webseite begrenzen */
+    html {max-width: 1200px;}
+
+    /* Anordnung auf dem Display */
+    /* Main Bereich */
+    main { display: flex; }
+    main nav { width: 40 % }
+    main div { width: 60 % }
+
+
