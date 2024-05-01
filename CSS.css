@@ -1,12 +1,33 @@
+/* Anpassungen für das Layout */
+/* Das Menü wird links platziert, der Inhaltsbereich nimmt den verfügbaren Platz ein */
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-/* Displayanordnung */
-    /* Gesamtbreite der Webseite begrenzen */
-    html {max-width: 1200px;}
+main nav {
+    flex: 1; /* Änderung: Das Menü nimmt den verfügbaren Platz ein */
+}
 
-    /* Anordnung auf dem Display */
-    /* Main Bereich */
-    main { display: flex; }
-    main nav { width: 40 % }
-    main div { width: 60 % }
+main div {
+    flex: 1;
+}
+
+/* Anpassungen für größere Bildschirmauflösungen */
+@media screen and (min-width: 768px) {
+    main nav {
+        flex: 0 0 auto;
+        width: auto; /* Änderung: Das Menü nimmt nur so viel Platz ein wie der längste Menüpunkt */
+        order: -1;
+    }
+
+    main div {
+        flex: 2;
+    }
+}
+
+
+
+
 
 
